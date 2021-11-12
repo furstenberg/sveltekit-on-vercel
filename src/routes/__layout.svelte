@@ -1,45 +1,26 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
-</script>
+	import "../app.css";
+  </script>
 
-<Header />
+  <svelte:head>
+	<meta name="robots" content="noindex" />
+  </svelte:head>
 
-<main>
-	<slot />
-</main>
+  <nav>
+	<a href=".">HOME</a>
+	<a href="/about">ABOUT</a>
+  </nav>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+  <slot />
 
-<style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
+  <style>
+	nav {
+	  padding: 1rem;
+	  box-shadow: -1px 1px 11px 4px #898989;
 	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+	a {
+	  text-decoration: none;
+	  color: gray;
+	  margin-right: 1rem;
 	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
-</style>
+  </style>
